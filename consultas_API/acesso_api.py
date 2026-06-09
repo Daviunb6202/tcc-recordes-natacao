@@ -1,7 +1,6 @@
 import os 
 import requests
 import pandas as pd
-import time
 
 headers = { 
     "User-Agent": "Mozilla/5.0",
@@ -168,7 +167,7 @@ if final_rows:
     df_final = df_final.sort_values(by=['Date', 'Competition'])
 
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    output_dir = os.path.join(base_dir, "output_ow")
+    output_dir = os.path.join(base_dir, "output")
     os.makedirs(output_dir, exist_ok=True)
 
     excel_path = os.path.join(output_dir, "Resultados_Finais_WorldAquatics.xlsx")
