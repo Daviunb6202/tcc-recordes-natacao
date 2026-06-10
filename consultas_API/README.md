@@ -1,4 +1,4 @@
-Nesta pasta consultas API são apresentados os seguintes arquivos: 
+Nesta pasta consultas_API são apresentados os seguintes arquivos: 
 
 acesso_api : Acessa API da World Aquatics a fim de obter os resultados das finais de cada competição World Aquatics Championships e Fina World Championships, e faz o "parsing" do JSON associado. 
 
@@ -8,3 +8,4 @@ captura_recordes : Web Scrapping da página USA Swimming, para pegar a tabela de
 
 tratamento_recores : Uso dda biblioteca pandas para remover e padronizar o nome de algumas colunas.
 
+Na pasta output estão salvos exemplos dos arquivos csv utilizados neste processo de coleta dos dados empíricos do estudo.
