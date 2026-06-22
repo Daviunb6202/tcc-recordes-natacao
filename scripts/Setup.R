@@ -3,13 +3,9 @@ library(lubridate)
 library(ggplot2) 
 library(tidyverse)
 library(nortest)
-library(broom)
 library(goftest)
-library(purrr)
-library(tseries) 
-require(extRemes)
 library(MASS) 
-library(forecast) # Para projetar as tendências de Mu e Sigma
+
 
 data_m <- read.csv("dado_tratado_homens.csv", header = TRUE, sep = ",")
 data_w <- read.csv("dado_tratado_mulheres.csv", header = TRUE, sep = ",")
