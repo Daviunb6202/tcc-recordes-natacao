@@ -4,7 +4,8 @@ library(ggplot2)
 library(tidyverse)
 library(nortest)
 library(goftest)
-library(MASS) 
+library(MASS)
+library(KScorrect)
 
 
 data_m <- read.csv("dado_tratado_homens.csv", header = TRUE, sep = ",")
