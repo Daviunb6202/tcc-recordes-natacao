@@ -6,7 +6,7 @@ library(nortest)
 library(goftest)
 library(MASS)
 library(KScorrect)
-
+library(extRemes)
 
 data_m <- read.csv("dado_tratado_homens.csv", header = TRUE, sep = ",")
 data_w <- read.csv("dado_tratado_mulheres.csv", header = TRUE, sep = ",")
