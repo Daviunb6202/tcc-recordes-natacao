@@ -25,7 +25,7 @@ alpha_futuro <- case_when(
 p_n_futuro <- (1 - alpha_futuro) / (n_cum_futuro - 2 * alpha_futuro + 1)
 Ez_futuro <- qnorm(p_n_futuro)
 ultimo_minimo <- df_theory %>% filter(Year == max(Year, na.rm = TRUE)) %>% pull(Step_Theoretical) %>% tail(1)
-sigma_individual <- mean(df_theory_backtest$sigma_local, na.rm = TRUE)
+sigma_individual <- mean(df_theory$sigma_local, na.rm = TRUE)
 
 # --- SIMULAÇÃO DE MONTE CARLO ---
 n_simulacoes <- 5000
