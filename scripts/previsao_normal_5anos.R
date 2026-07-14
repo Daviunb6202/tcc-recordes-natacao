@@ -1,5 +1,6 @@
 source("setup.R")         
 source("AdequacaoExpo.R") 
+ultimo_valor_real <- df_filtrado %>% arrange(abs(Results)) %>% pull(Results) %>% head(1)
 
 # --- MODELAGEM DA TENDÊNCIA ---
 modelo_treino <- ajustar_exponencial(df_dados = df_filtrado, ano_limite = 2019)
