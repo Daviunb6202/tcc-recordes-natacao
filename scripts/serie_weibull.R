@@ -43,6 +43,33 @@ escala_w <- fit_w$estimate["scale"]
 largura_weibull_05 <- qweibull(0.05, shape = forma_w, scale = escala_w)
 largura_weibull_95 <- qweibull(0.95, shape = forma_w, scale = escala_w)
 
+# --- VISUALIZAÇÃO DENSIDADE WEIBULL ---
+ggplot(df_melhores_residuos, aes(x = Abs_Residuals)) +
+  
+  geom_line(data = df_curva_weibull, aes(x = Abs_Residuals, y = Densidade), 
+            color = "red", 
+            linewidth = 1.) +
+
+  scale_x_continuous(limits = c(0, limite_maximo_eixo_x), 
+                     breaks = seq(0, limite_maximo_eixo_x, by = 0.5)) +
+  
+  theme_bw(base_family = "Arial") +
+  
+  labs(
+    x = "Resíduos Absolutos (Resultados vs Tendência)",
+    y = "Densidade"
+  ) +
+  
+  theme(
+    panel.grid.minor = element_blank(),
+    axis.title = element_text(face = "bold", size = 20),
+    axis.text.y = element_text(color = "black", size = 15),
+    axis.ticks.y = element_line(color = "black", linewidth = 0.8),
+    axis.ticks.length.y = unit(0.2, "cm"),
+    axis.text.x = element_text(color = "black", size = 15),
+    axis.ticks.x = element_line(color = "black", linewidth = 0.6)
+  )
+
 # --- ENVELOPE E ESCADA HISTÓRICA --- 
 df_sumario <- df_calc %>%
   mutate(
